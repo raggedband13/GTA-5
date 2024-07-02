@@ -1,0 +1,542 @@
+@import 'swiper.min.css';
+
+@font-face {
+    font-family: 'Pricedown';
+    src: url(../Fonts/pricedown\ bl.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #151211;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1 {
+    color: #fff;
+}
+
+img {
+    vertical-align: top;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Loading */
+
+.section_1 {
+    background: url(../img/1695811074_gas-kvas-com-p-kartinki-gta-5-29.jpg) no-repeat center / cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 999;
+}
+
+.active {
+    display: block;
+}
+
+.loading {
+    width: 1000px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #F5F9EB;
+    margin-top: calc(42% - 20px);
+}
+
+.line {
+    width: 0%;
+    height: 18px;
+    background-color: #B4E172;
+    filter: drop-shadow(0 0 20px #B4E172);
+    animation: 3s load forwards linear;
+}
+
+@keyframes load {
+    100% {
+        width: 100%;
+    }
+}
+
+/* Main screen */
+
+.section_2 {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/cdbe752cc90273b9fea106d747bf6fe9.jpg) no-repeat center / cover;
+    position: relative;   
+    display: none;
+}
+
+.section_2.active {
+    display: block;
+}
+
+.logo_rockstar {
+    width: 60px;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.5); 
+    width: 1200px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    animation-duration: 5s;
+    animation-name: hello;
+}
+
+@keyframes hello {
+
+    0% {
+        margin-top: -1000px;
+    }
+
+    100% {
+        margin-top: 0px;
+        
+    }
+}
+
+
+.ul_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 800;
+    font-family: 'Mont', sans-serif;
+    cursor: pointer;
+}
+
+.header_txt {
+    margin: 0px 30px;
+}
+
+.header_txt:hover {
+    filter: drop-shadow(0 0 20px #fff);
+}
+
+.header_buy {
+    border: 2px solid #FFAD00;
+    border-radius: 20px;
+    padding: 20px 40px;
+    margin: 0px 30px;
+}
+
+.header_buy:hover {
+    color: #000;
+    background-color: #FFAD00;
+}
+
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.welcome {
+    color: #fff;
+    font-size: 4em;
+}
+
+.gta_5_logo {
+    width: 300px;
+    margin-left: 30px;
+}
+
+
+/* Сharacters */
+
+.section_3 {
+    overflow-x: hidden;
+}
+
+.container_section_3 {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.header_viki {
+    background-color: rgba(0, 0, 0, 0.5); 
+    width: 1200px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    z-index: 999;
+}
+
+.header_txt_characters {
+    color: #FFAD00;
+    filter: drop-shadow(0 0 20px #FFAD00);
+}
+
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+} 
+
+.main-characters {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.main_characters_img {
+    width: 500px;
+    object-fit: cover;
+}
+
+
+.main_name {
+    position: absolute;
+    font-family: 'Pricedown', sans-serif;
+    color: #00C0F7;
+    font-size: 60px;
+    top: calc(33.333% - 30px);
+    opacity: 0;
+}
+
+.main_name_Franklin {
+    
+    color: #163C12;
+}
+
+.main_name_Trevor {
+    color: #E8980E;
+    
+}
+
+.swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    color: #fff;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    position: absolute;
+    color: #FFAD00;
+}
+
+.swiper-button-prev {
+    left: 300px;
+}
+
+.swiper-button-next  {
+    right: 300px;
+}
+
+
+.minor_characters_h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    transform: translateX(1500px);
+}
+
+.minor_characters_viki {
+    border: 2px solid #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 40px 50px;
+    margin-top: 100px;
+    opacity: 0;
+}
+
+.minor_characters_viki:hover {
+    box-shadow: 10px 10px 100px 6px #fff;
+}
+
+.minor_characters_photo {
+    text-align: center;
+}
+
+.minor_characters_img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.minor_characters_name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.minor_characters_inf {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.minor_characters_name_b {
+    color: #FFAD00;
+}
+
+.Franklin_viki {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.main_viki {
+    border: 3px solid #00C0F7;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.main_viki_Frank {
+    border: 3px solid #163C12;
+}
+
+.main_viki_Trevor {
+    border: 3px solid #FFAD00;
+}
+
+.main_photo {
+    text-align: center;
+}
+
+.main_img {
+    width: 250px;
+    border-radius: 15px;
+}
+
+.main_characters_name {
+    font-size: 25px;
+}
+
+.main_characters_inf {
+    font-size: 18px;
+}
+
+
+/* Secret */
+
+.secret_container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.secret_viki {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.title_secret {
+    font-size: 40px;
+}
+
+.img_secret {
+    width: 740px;
+}
+
+.secret_txt {
+    color: #fff;
+    width: 740px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cheats */
+
+.cheats_container {
+    padding-top: 100px;
+}
+
+.consoles {
+    color: #fff;
+}
+
+.ul_consoles {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.li_consoles {
+    text-align: center;
+    width: 417px;
+}
+
+.console {
+    margin: 0 85px;
+    font-size: 40px;
+    height: 93px;
+}
+
+.combination {
+    margin: 40px;
+    display: inline-block;
+    height: 38px;
+
+}
+
+.names_cheats {
+    margin-top: 93px;
+}
+
+.name_cheats {
+    margin: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    height: 38px;
+}
+
+/* Buy */
+
+.container_buy {
+    display: flex;
+    align-items: start;
+    height: 100vh;
+}
+
+.col-4 {
+    width: calc(33.3% - 20px);
+    border: 2px solid #fff;
+    border-radius: 15px;
+    margin: 20px;
+    text-align: center;
+    margin-top: 200px;
+    padding: 10px;
+}
+
+.consoles_buy {
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.consoles_container {
+    display: flex;
+    justify-content: center;
+}
+
+.consoles_buy:hover {
+    filter: drop-shadow(0 0 10px #006FCD);
+}
+
+.XBOX:hover {
+    filter: drop-shadow(0 0 10px #0e7a0d);
+}
+
+.PC {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.PC:hover {
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+.all_consoles {
+    color: #fff;
+    justify-content: center;
+    margin-top: 15px;
+    display: none;
+}
+
+.price {
+    margin-left: 5px;
+}
+
+/* footer */
+
+.footer {
+    border-top: 2px solid #fff;
+}
+
+.footer_container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0px;
+    width: 1200px;
+}
+
+.txt_footer {
+    font-size: 12px;
+    color: #fff;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brand {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer_ul {
+    display: flex;
+    justify-content: center;
+}
+
+.backgraund-ti {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.ti {
+    color: #fff;
+    margin-right: 20px;
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 1s;
+}
+
+.ti:hover {
+    background-color: #FFAD00;
+    border: 2px solid #FFAD00;
+    color: #000;
+}
