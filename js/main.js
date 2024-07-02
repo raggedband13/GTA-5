@@ -121,7 +121,7 @@ const secretContainer = document.querySelector('.secret_viki');
 
 const xml2 = new XMLHttpRequest();
 xml2.responseType = 'json';
-xml2.open('GET', '../secr.json');
+xml2.open('GET', 'secr.json');
 xml2.send();
 
 xml2.addEventListener('load', () => {
